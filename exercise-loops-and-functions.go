@@ -7,15 +7,21 @@ import (
 
 func Sqrt(x float64) float64 {
 	z := float64(1)
-	for i := 0; i < 10; i++ {
+	var Z float64
+	for {
+		Z = z
 		z = z - (math.Pow(z, 2)-x)/(2*z)
 
+		if math.Abs(Z-z) < 1e-10 {
+			return z
+		}
+
 	}
-	return z
 
 }
 
 func main() {
 	fmt.Println(Sqrt(2))
+	fmt.Println(math.Sqrt(2))
 }
 
