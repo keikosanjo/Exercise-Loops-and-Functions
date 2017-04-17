@@ -9,6 +9,11 @@ func fibonacci() func(int) int {
 	m := 1
 	sum := 0
 	return func(x int) int {
+	if x == 0 {
+			return 0
+		} else if x == 1 {
+			return 1
+		}
 		sum = s + m
 		s = m
 		m = sum
