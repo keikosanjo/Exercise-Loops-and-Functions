@@ -10,7 +10,7 @@ type Stringer interface {
 }
 
 func (a IPAddr) String() string {
-	
+	return fmt.Sprintf("%v.%v.%v.%v", a[0], a[1], a[2], a[3])
 }
 
 func main() {
