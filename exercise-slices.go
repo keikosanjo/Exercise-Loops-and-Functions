@@ -7,9 +7,9 @@ func Pic(dx, dy int) [][]uint8 {
 	for j := 0; j < dy; j++ {
 		p[j] = make([]uint8, dx)
 	}
-    for i := 0; i < dx; i++ {
+	for i := 0; i < dx; i++ {
 		for j := 0; j < dy; j++ {
-			p[i][j] = uint8((i+j)/2)
+			p[i][j] = uint8((i + j) / 2)
 		}
 	}
 	return p
